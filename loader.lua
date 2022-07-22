@@ -1,7 +1,7 @@
 if syn or KRNL_LOADED or KRNL then
     getgenv().ACBypass = true
 
-    if getgenv().ACBypass == true then
+    --[[if getgenv().ACBypass == true then
         local OldNameCall = nil
         OldNameCall = hookmetamethod(game, "__namecall", newcclosure(function(Self, ...)
             local Args = { ... }
@@ -28,7 +28,7 @@ if syn or KRNL_LOADED or KRNL then
 
             return OldNameCall(Self, ...)
         end))
-    end
+    end]]
 
     local ReplicatedStorage = game:GetService("ReplicatedStorage")
     local ReplicatedFirst   = game:GetService("ReplicatedFirst")
